@@ -31,10 +31,10 @@ Then `python3 -m http.server 4173` and open <http://localhost:4173>. The page fe
 | max frame orthonormality error | 2.22e-16 | — |
 | curvature of the tube surface | continuous | 180° normal jump at each inflection |
 
-- 12 curves × 16,384 triangles = **196,608 triangles**; generate + verify + bench under a minute.
+- 12 curves × 16,384 triangles = **196,608 triangles**; the `gen + verify` command measured **2.31 s** wall time, and the bench is a separate 7-sample run.
 - Pappus oracle (independent closed form, polygonal cross-section): arc volume error **6.32e-6 / 2.53e-5 / 5.69e-5**, area error **3.61e-6 / 1.52e-5 / 3.46e-5** for arc90 / arc180 / arc270.
 - Ring-doubling convergence on arc180 at rings 50/100/200/400/800: **4.081, 4.040, 4.020, 4.010** (second-order, as predicted).
-- Scale sweep 1e-3 → 1e6: normalized-volume spread **4.55e-14**, all watertight and flip-free; every threshold is relative (unit reflection vectors, relative degeneracy test).
+- Scale sweep 1e-3 → 1e6: normalized-volume spread **4.55e-14**, all watertight and flip-free; all RMF sweep thresholds are relative (unit reflection vectors); the Frenet control keeps a small absolute floor in its degeneracy test and is not claimed scale-free.
 - Timing, 12 curves per run: cold start **298.11 ms**; RMF median **212.07 ms**, p95 **247.70 ms**, RSD **6.94%** (7 samples); Frenet median 199.28 ms. The cold start is JIT warmup and is reported separately, not hidden in the median.
 - `bench/verify.mjs`: **16/16 assertions pass**, including an independent edge audit (sorted-edge counting) and 24/24 baked fingerprints matching a fresh node recomputation.
 
@@ -44,7 +44,7 @@ Previous B-team sweep work was either camera fly-through retiming (`sweepwarp-la
 
 ## Known limits
 
-- **Pappus oracle is exact only for a regular polygonal cross-section**; the mesh volume is **0.64% below the continuous-circle value** (measured 6.42e-3 relative at segments=32), because a 32-gon inscribes the circle. Both values are disclosed; the headline 5.69e-5 is against the matching polygon.
+- **Pappus oracle is exact only for a regular polygonal cross-section**; the mesh volume is **0.642–0.647% below the continuous-circle value** (measured 6.42e-3–6.47e-3 relative at segments=32), because a 32-gon inscribes the circle. Both values are disclosed; the headline 5.69e-5 is against the matching polygon.
 - Volume error is **discretization error, not a bug**: it shrinks 4× per ring doubling; at rings=256 the worst arc (270°) is 5.7e-5. A claim of "1e-13" would require analytic integration of the mesh, not a triangle sum.
 - Frenet tubes are still **watertight** (12/12): the baseline's defect is a discontinuous frame/twisted surface, not open edges. The visual 180° normal jump is the failure mode.
 - The `>90°` flip criterion is a declared convention; it captures the planar-wave inflection but would not flag a slow accumulated twist.
