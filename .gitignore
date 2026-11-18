@@ -9,3 +9,7 @@ __pycache__/
 *.tgz
 *.7z
 *.log
+
+# internal executor records, not part of the published artifact
+state/
+.model-patch.yml
