@@ -1,0 +1,112 @@
+{
+  "generatedAt": "2026-11-18T04:25:32.243Z",
+  "node": "v24.19.0",
+  "corpus": {
+    "curves": 12,
+    "rings": 256,
+    "segments": 32,
+    "trianglesPerMesh": 16384,
+    "totalTriangles": 196608
+  },
+  "implementation": {
+    "rmf": {
+      "flips": 0,
+      "maxStepDeg": 2.704378353345252,
+      "maxOrthoErr": 2.220446049250313e-16,
+      "watertight": 12,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    "frenetBaseline": {
+      "flips": 6,
+      "maxStepDeg": 179.99370368284445,
+      "curvedCurvesWithFlips": [
+        "wave-low",
+        "wave-mid",
+        "wave-high"
+      ],
+      "watertight": 12
+    }
+  },
+  "analytic": {
+    "arcs": [
+      {
+        "id": "arc90",
+        "volumeRelativeError": 0.000006324225030953189,
+        "areaRelativeError": 0.000003609608041098779,
+        "volume": 0.19063344443292804,
+        "analyticVolume": 0.19063465004935365
+      },
+      {
+        "id": "arc180",
+        "volumeRelativeError": 0.000025296756406477607,
+        "areaRelativeError": 0.000015208264370672825,
+        "volume": 1.2257576363879161,
+        "analyticVolume": 1.225788644864671
+      },
+      {
+        "id": "arc270",
+        "volumeRelativeError": 0.00005691716188029992,
+        "areaRelativeError": 0.00003459896683958357,
+        "volume": 7.060140728374698,
+        "analyticVolume": 7.060542594420507
+      }
+    ],
+    "maxVolumeRelativeError": 0.00005691716188029992,
+    "maxAreaRelativeError": 0.00003459896683958357
+  },
+  "timing": {
+    "coldStartMs": 298.110402,
+    "samples": 7,
+    "unit": "12 curves (rings=256, segments=32) per run",
+    "rmf": {
+      "min": 200.19431499999996,
+      "median": 212.07085399999994,
+      "p95": 247.70054900000014,
+      "max": 247.70054900000014,
+      "mean": 216.98199814285712,
+      "stddev": 15.052188785030207,
+      "rsdPct": 6.937068012029325
+    },
+    "frenet": {
+      "min": 196.40217600000005,
+      "median": 199.28300200000012,
+      "p95": 210.99509199999966,
+      "max": 210.99509199999966,
+      "mean": 201.43978157142854,
+      "stddev": 5.104046593858074,
+      "rsdPct": 2.5337828278215393
+    },
+    "perMeshMedianMs": 17.67257116666666
+  },
+  "fingerprints": {
+    "rmf": [
+      "1c3d425b-256-32-rmf",
+      "128d917d-256-32-rmf",
+      "7635fee5-256-32-rmf",
+      "eb5738db-256-32-rmf",
+      "b7cf53d6-256-32-rmf",
+      "4fdbed9a-256-32-rmf",
+      "45116f9c-256-32-rmf",
+      "ce70ece5-256-32-rmf",
+      "9b002ce8-256-32-rmf",
+      "e7207428-256-32-rmf",
+      "d4779c7d-256-32-rmf",
+      "d352e90c-256-32-rmf"
+    ],
+    "frenet": [
+      "83e3cd1b-256-32-frenet",
+      "36bb070d-256-32-frenet",
+      "bd0a9edd-256-32-frenet",
+      "3f91585e-256-32-frenet",
+      "33770389-256-32-frenet",
+      "f957388c-256-32-frenet",
+      "337345c4-256-32-frenet",
+      "b7f76e75-256-32-frenet",
+      "f8c89140-256-32-frenet",
+      "86b5e415-256-32-frenet",
+      "5480968c-256-32-frenet",
+      "b00c0093-256-32-frenet"
+    ]
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "generatedBy": "tools/gen-sample.mjs",
+  "rings": 256,
+  "segments": 32,
+  "curves": [
+    {
+      "id": "arc90",
+      "kind": "arc",
+      "params": {
+        "R": 1.2,
+        "theta": 1.5707963267948966
+      },
+      "radius": 0.18
+    },
+    {
+      "id": "arc180",
+      "kind": "arc",
+      "params": {
+        "R": 2,
+        "theta": 3.141592653589793
+      },
+      "radius": 0.25
+    },
+    {
+      "id": "arc270",
+      "kind": "arc",
+      "params": {
+        "R": 3,
+        "theta": 4.71238898038469
+      },
+      "radius": 0.4
+    },
+    {
+      "id": "helix-tight",
+      "kind": "helix",
+      "params": {
+        "r": 1.5,
+        "c": 0.12,
+        "turns": 1.5
+      },
+      "radius": 0.12
+    },
+    {
+      "id": "helix-loose",
+      "kind": "helix",
+      "params": {
+        "r": 1,
+        "c": 0.3,
+        "turns": 2
+      },
+      "radius": 0.1
+    },
+    {
+      "id": "helix-wide",
+      "kind": "helix",
+      "params": {
+        "r": 2.2,
+        "c": 0.05,
+        "turns": 1
+      },
+      "radius": 0.2
+    },
+    {
+      "id": "wave-low",
+      "kind": "wave",
+      "params": {
+        "A": 0.35,
+        "k": 2.2,
+        "span": 4
+      },
+      "radius": 0.07
+    },
+    {
+      "id": "wave-mid",
+      "kind": "wave",
+      "params": {
+        "A": 0.6,
+        "k": 1.6,
+        "span": 5
+      },
+      "radius": 0.09
+    },
+    {
+      "id": "wave-high",
+      "kind": "wave",
+      "params": {
+        "A": 0.25,
+        "k": 3,
+        "span": 3
+      },
+      "radius": 0.05
+    },
+    {
+      "id": "saddle-1",
+      "kind": "saddle",
+      "params": {
+        "A": 0.4,
+        "B": 0.15,
+        "k": 1.8,
+        "span": 4,
+        "phi": 0.5
+      },
+      "radius": 0.08
+    },
+    {
+      "id": "saddle-2",
+      "kind": "saddle",
+      "params": {
+        "A": 0.25,
+        "B": 0.3,
+        "k": 2.4,
+        "span": 3.5,
+        "phi": 1.2
+      },
+      "radius": 0.06
+    },
+    {
+      "id": "saddle-3",
+      "kind": "saddle",
+      "params": {
+        "A": 0.5,
+        "B": 0.1,
+        "k": 1.2,
+        "span": 5,
+        "phi": 2
+      },
+      "radius": 0.1
+    }
+  ],
+  "baked": {
+    "rmf": {
+      "arc90": {
+        "fingerprint": "1c3d425b-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0,
+        "orthoErr": 1.11e-16,
+        "watertight": true,
+        "volume": 0.190633444433,
+        "area": 2.33067289525
+      },
+      "arc180": {
+        "fingerprint": "128d917d-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0,
+        "orthoErr": 0,
+        "watertight": true,
+        "volume": 1.22575763639,
+        "area": 10.243782547
+      },
+      "arc270": {
+        "fingerprint": "7635fee5-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0,
+        "orthoErr": 1.11e-16,
+        "watertight": true,
+        "volume": 7.06014072837,
+        "area": 36.4711282456
+      },
+      "helix-tight": {
+        "fingerprint": "eb5738db-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 1.438995,
+        "orthoErr": 2.22e-16,
+        "watertight": true,
+        "volume": 0.637334819498,
+        "area": 10.7644468188
+      },
+      "helix-loose": {
+        "fingerprint": "b7cf53d6-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 2.704378,
+        "orthoErr": 2.22e-16,
+        "watertight": true,
+        "volume": 0.409371425241,
+        "area": 8.29061913128
+      },
+      "helix-wide": {
+        "fingerprint": "4fdbed9a-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0.200416,
+        "orthoErr": 2.22e-16,
+        "watertight": true,
+        "volume": 1.72618150427,
+        "area": 17.5957110885
+      },
+      "wave-low": {
+        "fingerprint": "45116f9c-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0,
+        "orthoErr": 1.11e-16,
+        "watertight": true,
+        "volume": 0.068999854439,
+        "area": 2.01158776661
+      },
+      "wave-mid": {
+        "fingerprint": "ce70ece5-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0,
+        "orthoErr": 5.551e-17,
+        "watertight": true,
+        "volume": 0.151356761737,
+        "area": 3.4303892325
+      },
+      "wave-high": {
+        "fingerprint": "9b002ce8-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0,
+        "orthoErr": 1.11e-16,
+        "watertight": true,
+        "volume": 0.0262976245995,
+        "area": 1.07262003404
+      },
+      "saddle-1": {
+        "fingerprint": "e7207428-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0.540584,
+        "orthoErr": 2.22e-16,
+        "watertight": true,
+        "volume": 0.0912586151886,
+        "area": 2.332482069
+      },
+      "saddle-2": {
+        "fingerprint": "d4779c7d-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 1.316012,
+        "orthoErr": 2.22e-16,
+        "watertight": true,
+        "volume": 0.0468970715535,
+        "area": 1.59330756411
+      },
+      "saddle-3": {
+        "fingerprint": "d352e90c-256-32-rmf",
+        "flips": 0,
+        "maxStepDeg": 0.127366,
+        "orthoErr": 2.22e-16,
+        "watertight": true,
+        "volume": 0.169269481641,
+        "area": 3.4642178218
+      }
+    },
+    "frenet": {
+      "arc90": {
+        "fingerprint": "83e3cd1b-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 0.352941,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.190633444433,
+        "area": 2.33067289525
+      },
+      "arc180": {
+        "fingerprint": "36bb070d-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 0.705882,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 1.22575763639,
+        "area": 10.243782547
+      },
+      "arc270": {
+        "fingerprint": "bd0a9edd-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 1.058824,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 7.06014072837,
+        "area": 36.4711282456
+      },
+      "helix-tight": {
+        "fingerprint": "3f91585e-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 2.117647,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.637272225819,
+        "area": 10.7644489623
+      },
+      "helix-loose": {
+        "fingerprint": "33770389-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 2.823529,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.409167433484,
+        "area": 8.29065368868
+      },
+      "helix-wide": {
+        "fingerprint": "f957388c-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 1.411765,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 1.7261496864,
+        "area": 17.5957114474
+      },
+      "wave-low": {
+        "fingerprint": "337345c4-256-32-frenet",
+        "flips": 2,
+        "maxStepDeg": 179.985801,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.0684852684985,
+        "area": 2.14380788053
+      },
+      "wave-mid": {
+        "fingerprint": "b7f76e75-256-32-frenet",
+        "flips": 2,
+        "maxStepDeg": 179.993704,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.150188873863,
+        "area": 3.64656764392
+      },
+      "wave-high": {
+        "fingerprint": "f8c89140-256-32-frenet",
+        "flips": 2,
+        "maxStepDeg": 179.983677,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.0261026059683,
+        "area": 1.13964400941
+      },
+      "saddle-1": {
+        "fingerprint": "86b5e415-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 7.954555,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.0913147780682,
+        "area": 2.33259212537
+      },
+      "saddle-2": {
+        "fingerprint": "5480968c-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 2.392086,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.0469329207696,
+        "area": 1.59336321477
+      },
+      "saddle-3": {
+        "fingerprint": "b00c0093-256-32-frenet",
+        "flips": 0,
+        "maxStepDeg": 6.38892,
+        "orthoErr": null,
+        "watertight": true,
+        "volume": 0.169354528744,
+        "area": 3.46435708419
+      }
+    }
+  },
+  "analytic": {
+    "arc90": {
+      "volumePolygon": 0.190634650049,
+      "volumeContinuous": 0.191865109557
+    },
+    "arc180": {
+      "volumePolygon": 1.22578864486,
+      "volumeContinuous": 1.23370055014
+    },
+    "arc270": {
+      "volumePolygon": 7.06054259442,
+      "volumeContinuous": 7.10611516878
+    }
+  }
+}

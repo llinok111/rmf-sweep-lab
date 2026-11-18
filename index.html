@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RMF sweep lab — rotation-minimizing frame tubes</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: #0d1117; color: #c9d1d9; overflow: hidden; }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; }
+  #panel { position: absolute; top: 12px; left: 12px; width: 340px; padding: 12px 14px;
+    background: rgba(22,27,34,.92); border: 1px solid #30363d; border-radius: 8px; }
+  h1 { font-size: 15px; margin: 0 0 4px; color: #58a6ff; }
+  .sub { color: #8b949e; margin-bottom: 10px; }
+  label { display: block; margin: 8px 0 2px; color: #8b949e; }
+  select, button { background: #21262d; color: #c9d1d9; border: 1px solid #30363d;
+    border-radius: 5px; padding: 3px 6px; font: inherit; }
+  button.on { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+  input[type=range] { width: 100%; accent-color: #1f6feb; }
+  .row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  #metrics { margin-top: 10px; padding-top: 8px; border-top: 1px solid #30363d; white-space: pre; }
+  .ok { color: #3fb950; } .bad { color: #f85149; } .num { color: #e3b341; }
+  #hint { position: absolute; bottom: 10px; left: 12px; color: #6e7681; }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="app"></div>
+<div id="panel">
+  <h1>RMF sweep lab</h1>
+  <div class="sub">One core: node bakes, browser recomputes.</div>
+  <label for="curve">curve</label>
+  <select id="curve"></select>
+  <label>frame transport</label>
+  <div class="row">
+    <button id="m-rmf" class="on">RMF (0 flips)</button>
+    <button id="m-frenet">Frenet (baseline)</button>
+  </div>
+  <label>rings <span id="rings-v">256</span></label>
+  <input id="rings" type="range" min="32" max="384" step="8" value="256" />
+  <label>cross-section segments <span id="seg-v">32</span></label>
+  <input id="seg" type="range" min="6" max="48" step="2" value="32" />
+  <div id="metrics"></div>
+</div>
+<div id="hint">drag to orbit · scroll to zoom · 12 curves laid out in a 4×3 grid</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
