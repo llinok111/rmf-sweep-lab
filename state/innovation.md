@@ -1,0 +1,1 @@
+2026-11-18 | three-d | llinok111/rmf-sweep-lab | rotation-minimizing-frame sweep tube certificate: 0 flips vs Frenet 6, 12/12 watertight, Pappus volume 5.69e-5 + measured 4x ring convergence; one pure core node-baked/browser-recomputed with fingerprint | B | 已发布

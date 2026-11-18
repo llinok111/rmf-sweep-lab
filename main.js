@@ -5,10 +5,10 @@ import { evaluate, arcAnalytic, fingerprintResult } from "./src/core.mjs";
 const app = document.getElementById("app");
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x0d1117);
-scene.fog = new THREE.Fog(0x0d1117, 18, 40);
+scene.fog = new THREE.Fog(0x0d1117, 30, 60);
 
 const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.05, 200);
-camera.position.set(0, 0.5, 16);
+camera.position.set(0, 0.5, 18);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
@@ -45,9 +45,9 @@ for (const c of doc.curves) {
 }
 
 function slotPosition(index) {
-  const col = index % 3;
-  const row = Math.floor(index / 3);
-  return { x: (col - 1) * 4.4, y: (1 - row) * 4.4 };
+  const col = index % 4;
+  const row = Math.floor(index / 4);
+  return { x: (col - 1.5) * 5.6, y: (1 - row) * 4.8 };
 }
 
 function disposeAll() {
